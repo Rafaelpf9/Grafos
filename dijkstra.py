@@ -24,9 +24,9 @@ def desenhabelldijkstra(graph,p):
 
 def Dijkstra(G, start, end=None):
 
-    D = {}  # dictionary of final distances
-    P = {}  # dictionary of predecessors
-    Q = priorityDictionary()  # estimated distances of non-final vertices
+    D = {}  
+    P = {} 
+    Q = priorityDictionary() 
     Q[start] = 0
 
     for v in Q:
@@ -47,12 +47,6 @@ def Dijkstra(G, start, end=None):
 
 
 def shortestPath(G, start, end):
-    """
-    Find a single shortest path from the given start vertex to the given
-    end vertex. The input has the same conventions as Dijkstra(). The
-    output is a list of the vertices in order along the shortest path.
-    """
-
     D, P = Dijkstra(G, start, end)
     Path = []
     while 1:
